@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for</title>
+</head>
+<body>
+<table>
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>name</th>
+            <th>auther</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for book in books %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{book.name}}</td>
+                <td>{{book.auther}}</td>
+            </tr>
+        {{% empty %}}
+            <tr>none</tr>
+        {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
